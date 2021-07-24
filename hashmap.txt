@@ -1,0 +1,37 @@
+[9:04 PM, 7/23/2021] Meghana: hashmap using iterator
+  
+import java.util.*;
+  
+class hashmap{
+    public static void main(String[] args)
+    {
+       
+        HashMap<String, Integer> hm = 
+                    new HashMap<String, Integer>();
+  
+       
+        hm.put("meghana", 22);
+        hm.put("A computer portal", 87);
+        hm.put("For meghana", 12);
+  
+        
+        System.out.println("Created hashmap is" + hm);
+  
+  
+        Iterator hmIterator = hm.entrySet().iterator();
+  
+        System.out.println("HashMap after adding bonus marks:");
+  
+        while (hmIterator.hasNext()) {
+            Map.Entry mapElement = (Map.Entry)hmIterator.next();
+            int marks = ((int)mapElement.getValue() + 10);
+            System.out.println(mapElement.getKey() + " : " + marks);
+        }
+    }
+}
+Output:
+Created hashmap is{meghana=22, A computer portal=87, For meghana=12}
+HashMap after adding bonus marks:
+GeeksforGeeks : 64
+A computer portal : 90
+For geeks : 92
